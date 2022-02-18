@@ -6,8 +6,8 @@ My implementation for the first edition can be found [here](https://github.com/m
 
 | Project                | Description                             | Status |
 | :------------:         | :---------------                        | :----- |
-| licensing-service      | Backend licensing service for O-Stock   | ![License workflow](https://github.com/mariamihai/sma-2nd-ed-overview/actions/workflows/licensing-service.yaml/badge.svg) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=sma-licensing-service&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=sma-licensing-service) |
-| organization-service   | Organizaiton service for O-Stock        | ![Organzation workflow](https://github.com/mariamihai/sma-2nd-ed-overview/actions/workflows/organization-service.yaml/badge.svg) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=sma-organization-service&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=sma-organization-service) |
+| licensing-service      | Backend licensing service for O-Stock   | [![licensing-service](https://github.com/mariamihai/sma-2nd-ed-overview/actions/workflows/licensing-service.yaml/badge.svg)](https://github.com/mariamihai/sma-2nd-ed-overview/actions/workflows/licensing-service.yaml) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=sma-licensing-service&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=sma-licensing-service) |
+| organization-service   | Organizaiton service for O-Stock        | [![organization-service](https://github.com/mariamihai/sma-2nd-ed-overview/actions/workflows/organization-service.yaml/badge.svg)](https://github.com/mariamihai/sma-2nd-ed-overview/actions/workflows/organization-service.yaml) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=sma-organization-service&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=sma-organization-service) |
 
 ## Project
 Implementing a software product for a fictitious company named **Optima Growth**, a software development company whose 
