@@ -175,3 +175,4 @@ My implementation of the Licensing Service described in "Spring Microservices in
 * **Error Response:**
 
   No defined errors at the moment.
+
