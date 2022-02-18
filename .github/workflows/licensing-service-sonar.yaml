@@ -7,16 +7,11 @@ on:
       - master
     paths:
       - "licensing-service/**"
-  pull_request:
-    types: [opened, synchronize, reopened]
-    paths:
-      - "licensing-service/**"
 
 jobs:
-  sonarcloud:
+  build:
     name: Build
     runs-on: ubuntu-latest
-    environment: dev
 
     steps:
       - uses: actions/checkout@v2
