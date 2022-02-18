@@ -17,3 +17,14 @@ management, compliance, cost, and resource management.
 Initial architecture as explained in the book:
 ![Architecture](images/Initial%20architecture.png)
 
+### Running locally
+Build the image for the service to be run locally:
+```
+cd <service_folder>
+
+mvn clean package dockerfile_build
+```
+
+The image name will be of format `mariamihai/sma-<service-name>:0.0.1-SNAPSHOT` (like `mariamihai/sma-licensing-service:0.0.1-SNAPSHOT`)
+
+Either run this with `docker run` or from `local.yaml` Docker Compose file in Docker folder (`docker-compose -f docker/local.yaml up`)
