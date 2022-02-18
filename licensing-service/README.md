@@ -22,6 +22,10 @@ My implementation of the Licensing Service described in "Spring Microservices in
 
 * **Data Params** - 
 
+* **Headers**
+
+  `Accept-Language` - us and ro supported
+
 * **Success Response:**
     * **Code:** 200 <br />
       **Content:**
@@ -63,6 +67,10 @@ My implementation of the Licensing Service described in "Spring Microservices in
     "licenseType": "full"
   }
   ```
+
+* **Headers**
+
+  `Accept-Language` - us and ro supported
 
 * **Success Response:**
     * **Code:** 200 <br />
@@ -106,6 +114,10 @@ My implementation of the Licensing Service described in "Spring Microservices in
   }
   ```
 
+* **Headers**
+
+  `Accept-Language` - us and ro supported
+
 * **Success Response:**
   * **Code:** 200 <br />
     **Content:**
@@ -141,6 +153,10 @@ My implementation of the Licensing Service described in "Spring Microservices in
   **Optional:** -
 
 * **Data Params** -
+
+* **Headers**
+
+  `Accept-Language` - us and ro supported
 
 * **Success Response:**
   * **Code:** 200 <br />
