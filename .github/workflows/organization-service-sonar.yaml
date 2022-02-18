@@ -36,5 +36,5 @@ jobs:
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: cd organization-service; mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=mariamihai_sma-2nd-ed-overview
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_ORGANIZATION_SERVICE }}
+        run: cd organization-service; mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=sma-organization-service
