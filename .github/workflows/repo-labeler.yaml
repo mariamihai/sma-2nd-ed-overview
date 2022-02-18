@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Label PRs
-        uses: tinkurlab/monorepo-pr-labeler-action
+        uses: TinkurLab/monorepo-pr-labeler-action@3.1.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BASE_DIRS: 'licensing-service|organization-service'
