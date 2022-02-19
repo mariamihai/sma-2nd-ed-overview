@@ -33,6 +33,10 @@ jobs:
           path: ~/.sonar/cache
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
+      - uses: actions/upload-artifact@v2
+        with:
+          name: lincensing-service-workspace
+          path: .
 
   sonar:
     name: Sonar
@@ -40,6 +44,9 @@ jobs:
     needs: setup
 
     steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: lincensing-service-workspace
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
