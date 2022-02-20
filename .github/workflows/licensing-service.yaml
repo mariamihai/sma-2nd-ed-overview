@@ -52,6 +52,6 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          file: "{context}/licensing-service/Dockerfile"
+          file: "./licensing-service/Dockerfile"
           push: true
           tags: mariamihai/sma-licensing-service:latest
