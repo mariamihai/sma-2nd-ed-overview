@@ -54,4 +54,4 @@ jobs:
         with:
           file: "{context}/licensing-service/Dockerfile"
           push: true
-          tags: user/app:latest
+          tags: mariamihai/sma-licensing-service:latest
