@@ -35,33 +35,37 @@ jobs:
           path: ~/.sonar/cache
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
-      - name: Cache Docker layers
-        uses: actions/cache@v2
-        with:
-          path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-buildx-
+
+      - name: Build the package
+        run: |
+          cd licensing-service
+          mvn -B package
 
       - name: Sonar
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_LICENSING_SERVICE }}
-        run: cd licensing-service; mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=sma-licensing-service
+        run: |
+          cd licensing-service
+          mvn -B org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=sma-licensing-service
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
           username:  ${{ github.repository_owner }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        run: |
+          cd licensing-service
+          mvn dockerfile:build
+          mvn dockerfile:tag@tag-version -Drevision=1
+          mvn dockerfile:push@push-latest
+          mvn dockerfile:push@push-version -Drevision=1
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
           file: "./licensing-service/Dockerfile"
           tags: mariamihai/sma-licensing-service:latest
           push: true
-          builder: ${{ steps.buildx.outputs.name }}
-          cache-from: type=local,src=/tmp/.buildx-cache
-          cache-to: type=local,mode=max,dest=/tmp/.buildx-cache
