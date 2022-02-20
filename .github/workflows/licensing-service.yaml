@@ -62,10 +62,3 @@ jobs:
           mvn dockerfile:tag@tag-version -Drevision=1
           mvn dockerfile:push@push-latest
           mvn dockerfile:push@push-version -Drevision=1
-
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v2
-        with:
-          file: "./licensing-service/Dockerfile"
-          tags: mariamihai/sma-licensing-service:latest
-          push: true
