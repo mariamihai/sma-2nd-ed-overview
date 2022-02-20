@@ -59,6 +59,6 @@ jobs:
         run: |
           cd licensing-service
           mvn dockerfile:build
-          mvn dockerfile:tag@tag-version -Drevision=1
+          mvn dockerfile:tag@tag-version -Drevision=${GITHUB_RUN_NUMBER}
           mvn dockerfile:push@push-latest
-          mvn dockerfile:push@push-version -Drevision=1
+          mvn dockerfile:push@push-version -Drevision=${GITHUB_RUN_NUMBER}
