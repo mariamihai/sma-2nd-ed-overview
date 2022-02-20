@@ -3,7 +3,9 @@ FROM amazoncorretto:17-alpine as build
 
 LABEL maintainer="Maria Mihai <maria.ic.mihai@gmail.com>"
 
-COPY target/*.jar app.jar
+ARG JAR_FILE
+
+COPY ${JAR_FILE} app.jar
 
 RUN mkdir -p target/dependency && (cd target/dependency; jar -xf /app.jar)
 
