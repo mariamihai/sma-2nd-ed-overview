@@ -1,6 +1,11 @@
+[![licensing-service](https://github.com/mariamihai/sma-2nd-ed-overview/actions/workflows/licensing-service.yaml/badge.svg)](https://github.com/mariamihai/sma-2nd-ed-overview/actions/workflows/licensing-service.yaml) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=sma-licensing-service&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=sma-licensing-service) [![Docker image](https://badgen.net/badge/icon/docker?icon=docker&label=licensing-service)](https://hub.docker.com/r/mariamihai/sma2-licensing-service)
+
 # Licensing Service
 
-My implementation of the Licensing Service described in "Spring Microservices in Action".
+My implementation of the **Licensing Service** described in **Spring Microservices in Action** by John Carnell and Illary Huaylupo Sanchez, for the
+second edition of the book published in 2021.
+
+An overview of all the projects can be found [here](../../..).
 
 ## API
 
